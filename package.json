@@ -1,6 +1,6 @@
 {
   "name": "@ransom/bump",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ship esm and cjs bundle for bump utils",
   "keywords": [
     "bump",
