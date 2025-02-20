@@ -1,5 +1,5 @@
 {
-  "name": "@ransom/bump",
+  "name": "@ransom-utils/bump",
   "version": "0.0.9",
   "description": "ship esm and cjs bundle for bump utils",
   "packageManager": "pnpm@9.15.2",
