@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // “mix and match” target and lib settings as desired, but you could just set target for convenience.
+    // "target": "esnext",
+    // "lib":
+    "module": "esnext",
+    "moduleResolution": "node",
+    // @see https://www.typescriptlang.org/tsconfig/#lib
+    // array.include is available at least es2016
+    "target": "esnext",
+    //  node v12 and later support both esm import and cjs require
+    // Like node16 and nodenext, this mode supports package.json "imports" and "exports",
+    // never requires file extensions on relative paths in imports.
+    // "moduleResolution": "bundler",
+    //support for dynamic imports, and import.meta(es2020)  top level await(es2022).
+    // "module": "esnext",
+    "esModuleInterop": true,
+
+    "skipLibCheck": true,
+    //bundled declaration file
+
+    // checking
+    "newLine": "lf",
+    "forceConsistentCasingInFileNames": true,
+    // Ensures that any non-empty case inside a switch statement includes either break, return, or throw.
+    "noFallthroughCasesInSwitch": true,
+    // "noImplicitAny": true,
+    // "noImplicitThis": true,
+    // "strictBindCallApply": true,
+    // "strictNullChecks": true,
+
+    "outDir": "lib",
+    "declaration": true
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["**/node_modules/**", "**/dist/**", "scripts"]
+}
