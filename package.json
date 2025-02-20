@@ -2,6 +2,22 @@
   "name": "@ransom/bump",
   "version": "0.0.8",
   "description": "ship esm and cjs bundle for bump utils",
+  "packageManager": "pnpm@9.15.2",
+  "authors": [
+    {
+      "name": "lavitalite",
+      "url": "https://github.com/lavitalite"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ransom-utils/bump",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ransom-utils/bump"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "bump",
     "version"
@@ -18,7 +34,7 @@
   "module": "./lib/index.mjs",
   "types": "./lib/index.d.ts",
   "bin": {
-    "bump": "bin/bump.js"
+    "bump": "bin/bump.mjs"
   },
   "files": [
     "bin",
