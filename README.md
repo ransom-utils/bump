@@ -1,14 +1,17 @@
-esm like, copy version of bump utils [bump](https://www.npmjs.com/package/@jsdevtools/version-bump-prompt?activeTab=code) 
+
+
+credits from  [bump](https://www.npmjs.com/package/@jsdevtools/version-bump-prompt?activeTab=code) 
+[bumpp](https://www.npmjs.com/package/bumpp)
 
 Ships ESM and CJS bundles.
 
-
 esm-only bundle in next version
+
 
 `tsx` - run ts file in node 
 `tsup` - ship esm and cjs bundle
 `cac` - cli framework
-`"c12"`: 
+`"c12"`: configuration loader
 `escalade`: upward file search
 `inquirer` - prompt
 `jsonc-parser`: parser that maintain comment
