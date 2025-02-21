@@ -12,6 +12,7 @@ export async function updateFiles(operation: Operation): Promise<Operation> {
   for (const relPath of files) {
     const modified = await updateFile(relPath, operation);
     if (modified) {
+
       operation.update({
         event: ProgressEvent.FileUpdated,
         updatedFiles: operation.state.updatedFiles.concat(relPath),

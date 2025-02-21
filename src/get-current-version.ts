@@ -24,7 +24,7 @@ export async function getCurrentVersion(operation: Operation): Promise<Operation
   for (const file of filesToCheck) {
 
     const version = await readVersion(file, cwd);
-    // console.log('file->%s\nversion->%s', file, version)
+    console.log('file->%s\cwd->%s', file, cwd)
     if (version) {
       // We found the current version number!
       return operation.update({

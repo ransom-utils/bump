@@ -1,0 +1,60 @@
+{
+  "name": "@ransom-utils/bump",
+  "version": "0.0.9",
+  "description": "ship esm and cjs bundle for bump utils",
+  "packageManager": "pnpm@9.15.2",
+  "authors": [
+    {
+      "name": "lavitalite",
+      "url": "https://github.com/lavitalite"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ransom-utils/bump",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ransom-utils/bump"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["bump", "version"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    }
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "bin": {
+    "bump": "bin/bump.mjs"
+  },
+  "files": ["bin", "lib"],
+  "scripts": {
+    "start": "tsx src/cli/run.ts",
+    "build": "tsup src/index.ts src/cli.ts  --format cjs,esm --dts --clean --outDir lib",
+    "watch": "npm run build -- --watch src",
+    "bump": "node bin/bump.js --tag --push --all",
+    "release": "pnpm run start && pnpm publish",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "c12": "^2.0.1",
+    "cac": "^6.7.14",
+    "escalade": "^3.2.0",
+    "inquirer": "^12.4.1",
+    "jsonc-parser": "^3.3.1",
+    "picocolors": "^1.1.1",
+    "semver": "^7.6.0",
+    "tinyexec": "^0.3.2",
+    "tinyglobby": "^0.2.10"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.3"
+  }
+}

@@ -18,4 +18,4 @@ esm-only bundle in next version
 `picocolors`:  Colored symbols for log
 `semver`: version validate
 `tinyexec`:  runs commands in your script
-`tinyglobby`: file patterns matcher
+`tinyglobby`: pattern to path

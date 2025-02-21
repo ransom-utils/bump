@@ -39,7 +39,7 @@ export async function gitCommit(operation: Operation): Promise<Operation> {
   if (!all) {
     args = args.concat(updatedFiles)
   }
-
+  await run('git', ['add', ...updatedFiles])
   await run('git', ['commit', ...args])
   return operation.update({ event: ProgressEvent.GitCommit, commitMessage });
 }

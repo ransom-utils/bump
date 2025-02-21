@@ -60,8 +60,8 @@ export class Operation {
       newVersion: state.newVersion,
       commit: options.commit ? state.commitMessage : false,
       tag: options.tag ? state.tagName : false,
-      updatedFiles: state.updatedFiles,
-      skippedFiles: state.skippedFiles
+      updatedFiles: state.updatedFiles.slice(),
+      skippedFiles: state.skippedFiles.slice()
     }
   }
 
@@ -85,6 +85,7 @@ export class Operation {
   public static async start(input: VersionBumpOptions): Promise<Operation> {
     // validate and normalize the options
     const options = await normalizeOptions(input)
+    // console.log("parsed-options %s", JSON.stringify(options, null, 2));
     return new Operation(options, input.progress)
   }
 

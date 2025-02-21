@@ -1,5 +1,4 @@
 import { type VersionBumpOptions } from '../types/version-bump-options'
-import commandLineArgs from 'command-line-args'
 import { isReleaseType } from '../release-type'
 import semver from 'semver'
 import { loadCliArgs, usageText } from './help'
@@ -25,7 +24,6 @@ export async function parseArgs(): Promise<ParsedArgs> {
 
   try {
     const { args, resultArgs } = loadCliArgs()
-    console.log('args->%s\nresultArgs->%s', args, resultArgs)
     const parsedArgs: ParsedArgs = {
       help: args.help as boolean,
       version: args.version as boolean,
