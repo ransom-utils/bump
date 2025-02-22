@@ -17,6 +17,7 @@ import("../lib/cli.js").then((r) => r.main());
 // const cwd = fileURLToPath(new URL('.', import.meta.url))
 
 // to make require available in your esm bundle
+// or just use (await import('mod')).default
 /**
  * export default defineConfig({
   banner: ({ format }) => {
